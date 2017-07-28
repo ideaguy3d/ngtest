@@ -1,0 +1,18 @@
+{
+  "name": "angularjs-testing",
+  "version": "1.0.0",
+  "description": "AngularJS Testing Quick Start",
+  "main": "karma.conf.js",
+  "dependencies": {
+    "karma": "^0.12.24",
+    "karma-cli": "^0.0.4",
+    "karma-ng-html2js-preprocessor": "^0.1.2"
+  },
+  "devDependencies": {
+    "karma": "^0.12.24",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-jasmine": "^0.2.3"
+  },
+  "author": "Julius Alvarado",
+  "license": "MIT"
+}
