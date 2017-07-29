@@ -7,6 +7,5 @@ eventsApp.controller('EditProfileController',
         $scope.getGravatarUrl = function(email) {
             return gravatarUrlBuilder.buildGravatarUrl(email);
         }
-
     }
 );
