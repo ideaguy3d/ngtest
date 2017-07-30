@@ -3,12 +3,9 @@
 console.log();
 describe('eventThumbnail', function () {
     var el;
-    console.log("above it all !!");
     beforeEach(module('eventsApp'));
-    console.log("above the module() template");
     // get the template for the directive we are testing
     beforeEach( module('/templates/directives/eventThumbnail.html') );
-    console.log("below it");
     beforeEach(inject(function ($compile, $rootScope) {
         var scope = $rootScope.$new();
         scope.event = {
@@ -19,7 +16,7 @@ describe('eventThumbnail', function () {
         el = angular.element('<event-thumbnail event="event" />');
         $compile(el)(scope);
         scope.$digest();
-        console.log(el[0].outerHTML);
+        // console.log(el[0].outerHTML);
     }));
 
     it("should bind the data", function () {
