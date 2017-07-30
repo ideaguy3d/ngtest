@@ -1,30 +1,42 @@
-module.exports = function(config){
-  config.set({
+module.exports = function (config) {
+    config.set({
 
-    basePath : '../app',
+        basePath: '../app',
 
-    files : [
-      'lib/angular/angular.js',
-      'lib/angular/angular-*.js',
-      '../test/lib/angular-mocks.js',
-      '../test/lib/sinon-1.15.0.js',
-      'js/**/*.js',
-      '../test/unit/**/*.js'
-    ],
+        preprocessors: {
+            '**/*.html': 'ng-html2js'
+        },
 
-    autoWatch : true,
+        ngHtml2JsPreprocessor: {
+            prependPrefix: '/'
+        },
 
-    frameworks: ['jasmine'],
+        files: [
+            'lib/angular/angular.js',
+            'lib/angular/angular-*.js',
+            '../test/lib/angular-mocks.js',
+            '../test/lib/sinon-1.15.0.js',
+            'js/**/*.js',
+            '../test/unit/**/*.js',
+            'templates/directives/*.html'
+        ],
 
-    plugins : [
-      'karma-chrome-launcher',
-      'karma-jasmine'
-    ],
+        autoWatch: true,
 
-    junitReporter : {
-      outputFile: 'test_out/unit.xml',
-      suite: 'unit'
-    }
+        frameworks: ['jasmine'],
 
-  });
+        // browsers: ['Chrome'],
+
+        plugins: [
+            //'karma-chrome-launcher',
+            'karma-jasmine',
+            'karma-ng-html2js-preprocessor'
+        ],
+
+        junitReporter: {
+            outputFile: 'test_out/unit.xml',
+            suite: 'unit'
+        }
+
+    });
 };

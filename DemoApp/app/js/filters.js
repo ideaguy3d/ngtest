@@ -13,4 +13,4 @@ eventsApp.filter('durations', function() {
         return "Full Day";
     }
   }
-})
+});
